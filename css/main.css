@@ -97,8 +97,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-
+header {
+    background: linear-gradient(darkgrey, lightgrey);
+    width: 100%;
+    padding: 20px;
+}
 
 
 
