@@ -125,7 +125,30 @@ a:hover {
   background-color: red;
 }
 
+h1, h2 {
+  background-color: lightgrey;
+  font-size: 30px;
+  padding: 1em;
+ }
 
+p {
+  background-color: lightblue;
+  font-size: 20px;
+  padding: 0em 3em;
+}
+
+.box1 {
+  background-color: lightgrey;
+}
+
+.box1:hover {
+  cursor: pointer;
+  background-color: darkgrey;
+}
+
+.box10 {
+background-color: lightblue;
+}
 
 
 
