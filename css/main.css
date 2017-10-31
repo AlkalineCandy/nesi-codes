@@ -121,10 +121,10 @@ textarea {
      background-color: darkgrey;
    }
 
-   a:hover {
+  nav > a:hover {
      background-color: red;
    }
-    
+
 
    .wrapper {
       border: 1px solid black;
