@@ -24,3 +24,31 @@ $('.box30').hide();
   });
 
 $(document).ready(main);
+
+
+function main() {}
+$('.box40').hide();
+  $(".box4").on("click", function(){
+    $(".box40").toggle();
+    $(this).toggleClass("active");
+  });
+
+$(document).ready(main);
+
+function main() {}
+$('.box50').hide();
+  $(".box5").on("click", function(){
+    $(".box50").toggle();
+    $(this).toggleClass("active");
+  });
+
+$(document).ready(main);
+
+function main() {}
+$('.box60').hide();
+  $(".box6").on("click", function(){
+    $(".box60").toggle();
+    $(this).toggleClass("active");
+  });
+
+$(document).ready(main);

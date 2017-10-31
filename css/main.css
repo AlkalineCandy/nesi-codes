@@ -97,79 +97,83 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-header {
-    background: linear-gradient(darkgrey, lightgrey);
-    width: 100%;
-    padding: 20px;
-}
+   header {
+     width: 100%;
+     background-color: lightgrey;
+     padding: 40px 20px 20px 20px;
+   }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 0;
-  background-color: grey;
-}
+   nav {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     text-align: center;
+     font-size: 0;
+     background-color: transparent;
+   }
 
-nav a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 20px 50px;
-  color: black;
-  font-size: 30px;
-  background-color: blue;
-}
+   nav a {
+     text-decoration: none;
+     display: inline-block;
+     padding: 10px 40px 20px;
+     color: black;
+     font-size: 25px;
+     background-color: darkgrey;
+   }
 
-a:hover {
-  background-color: red;
-}
+   a:hover {
+     background-color: red;
+   }
+    
 
-h1, h2 {
-  background-color: lightgrey;
-  font-size: 30px;
-  padding: 1em;
- }
+   .wrapper {
+      border: 1px solid black;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+      width: 90%;
+   }
 
-p {
-  background-color: lightblue;
-  font-size: 20px;
-  padding: 0em 3em;
-}
+   .box1, .box2, .box3, .box4, .box5, .box6 {
+     border: 1px solid black;
+     background-color: lightgrey;
+     width: 30em;
+     margin: 0px 20px 30px 0px;
+   }
 
-.wrapper {
-   border: 1px solid black;
-   overflow: auto;
-   margin: auto;
-   width: 90%;
-}
+   .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover {
+     cursor: pointer;
+     background-color: darkgrey;
+   }
 
-.box1 {
-  float: left;
-}
+   .box10, .box20, .box30, .box40, .box50, .box60 {
+   background-color: lightblue;
+   }
 
-.box1, .box2, .box3 {
-  border: 1px solid black;
-  background-color: lightgrey;
-  width: 20em;
-}
+   footer {
+     position: absolute;
+     right: 0;
+     bottom: 0px;
+     left: 0;
+     padding: 0.25em;
+     background-color: #efefef;
+     text-align: center;
+   }
 
-.box2 {
-     margin: 0 0 0 400px;
-}
+   .footercontainer > a {
+     text-decoration: none;
+     display: inline-block;
+     color: darkgrey;
+     font-size: 25px;
+     margin: 3px 15px;
+   }
 
-.box3 {
-  margin: 0 0 0 800px;
-}
+   .footercontainer > a:hover {
+     color:black;
+   }
 
-.box1:hover, .box2:hover, .box3:hover {
-  cursor: pointer;
-  background-color: darkgrey;
-}
-
-.box10, .box20, .box30 {
-background-color: lightblue;
-}
 
 
 
