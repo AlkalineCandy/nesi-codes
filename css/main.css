@@ -142,6 +142,47 @@ textarea {
      color: red;
    }
 
+   /* Slider */
+
+   .responsive {
+  display: block;
+  margin: auto;
+  width: 40%;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.leftbutton {
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 476px;
+  opacity: 0.6;
+  cursor:pointer;
+}
+
+.rightbutton {
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 501px;
+  opacity: 0.6;
+  cursor:pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+/* Flexbox */
+
     .wrapper {
        border: 1px solid black;
        display: flex;
@@ -167,6 +208,8 @@ textarea {
     .box10, .box20, .box30, .box40, .box50, .box60 {
       background-color: lightblue;
     }
+
+    /* Footer */
 
     footer {
       position: absolute;
