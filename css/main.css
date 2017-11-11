@@ -96,142 +96,166 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-  html {
-     height: 100vh;
-     box-sizing: border-box;
-   }
 
-   *,
-   *:before,
-   *:after {
-     box-sizing: inherit;
-   }
+   html {
+        height: 100vh;
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
 
 
-   body {
-     position:relative;
-     min-height: 100%;
-     padding-bottom: 0.25em;
-   }
+      body {
+        position:relative;
+        min-height: 100%;
+        padding-bottom: 0.25em;
+      }
 
-   header {
-      width: 100%;
-      background-color: lightgrey;
-      padding: 40px 20px 20px 20px;
-    }
+      header {
+         width: 100%;
+         background-color: lightgrey;
+         padding: 40px 20px 20px 20px;
+       }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      text-align: center;
-      font-size: 0;
-      background-color: transparent;
-    }
+       nav {
+         position: fixed;
+         top: 0;
+         width: 100%;
+         text-align: center;
+         font-size: 0;
+         background-color: transparent;
+       }
 
-    nav a {
-      text-decoration: none;
-      display: inline-block;
-      padding: 10px 40px 20px;
-      color: black;
-      font-size: 25px;
-      background-color: darkgrey;
-    }
+       nav a {
+         text-decoration: none;
+         display: inline-block;
+         padding: 10px 40px 20px;
+         color: black;
+         font-size: 25px;
+         background-color: darkgrey;
+       }
 
-    nav a:hover {
-     color: red;
-   }
+       nav a:hover {
+        color: red;
+      }
 
-   /* Slider */
+      /* Slider */
 
-   .responsive {
-  display: block;
-  margin: auto;
-  width: 40%;
-  border: 1px solid black;
-  padding: 10px;
-}
-
-.leftbutton {
-  position: absolute;
-  margin-top: -40px;
-  margin-left: 476px;
-  opacity: 0.6;
-  cursor:pointer;
-}
-
-.rightbutton {
-  position: absolute;
-  margin-top: -40px;
-  margin-left: 501px;
-  opacity: 0.6;
-  cursor:pointer;
-}
-
-@media only screen and (max-width: 700px){
     .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
+     posititon: relative;
+     display: block;
+     margin: auto;
+     width: 90%;
+     height: 20rem;
+     border: 1px solid black;
+     padding: 10px;
+   }
 
-@media only screen and (max-width: 500px){
-    .responsive {
-        width: 100%;
-    }
-}
-
-/* Flexbox */
-
-    .wrapper {
-       border: 1px solid black;
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: center;
-       margin: auto;
-       width: 90%;
+   .mySlides {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .box1, .box2, .box3, .box4, .box5, .box6 {
-      border: 1px solid black;
-      background-color: lightgrey;
-      width: 30em;
-      margin: 0px 20px 30px 0px;
+    .slidebuttons {
+      position: relative;
+      top: -1.6em;
+      left: 0.1em;
     }
 
-    .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover {
-      cursor: pointer;
-      background-color: darkgrey;
-    }
+   .leftbutton {
+     opacity: 0.6;
+     cursor:pointer;
+   }
 
-    .box10, .box20, .box30, .box40, .box50, .box60 {
-      background-color: lightblue;
-    }
+   .rightbutton {
+     opacity: 0.6;
+     cursor:pointer;
+   }
+
+  @media only screen and (max-width: 700px){
+       .responsive {
+           width: 49.99999%;
+           margin: 6px 0;
+       }
+   }
+
+   @media only screen and (max-width: 500px){
+       .responsive {
+           width: 100%;
+       }
+   }
+
+   /* Flexbox */
+
+       .wrapper {
+          border: 1px solid black;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: auto;
+          width: 90%;
+       }
+
+       .box1, .box2, .box3, .box4, .box5, .box6 {
+         align-self: flex-start;
+         border: 1px solid black;
+         background-color: lightgrey;
+         width: 30em;
+         margin: 0px 20px 30px 0px;
+       }
+
+       .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover {
+         cursor: pointer;
+         background-color: darkgrey;
+       }
+
+       .box10, .box20, .box30, .box40, .box50, .box60 {
+         background-color: lightblue;
+       }
 
     /* Footer */
 
-    footer {
-      position: absolute;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      padding: 0.25em;
-      background-color: #efefef;
-      text-align: center;
-    }
+       footer {
+         position: absolute;
+         right: 0px;
+         bottom: 0px;
+         left: 0px;
+         padding: 0.25em;
+         background-color: #efefef;
+         text-align: center;
+       }
 
-    .footercontainer > a {
-      text-decoration: none;
-      display: inline-block;
-      color: darkgrey;
-      font-size: 25px;
-      margin: 3px 15px;
-    }
+       .footercontainer > a {
+         text-decoration: none;
+         display: inline-block;
+         color: darkgrey;
+         font-size: 25px;
+         margin: 3px 15px;
+       }
 
-    .footercontainer > a:hover {
-      color:black;
-    }
+       .footercontainer > a:hover {
+         color:black;
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    Helper classes
