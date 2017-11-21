@@ -113,34 +113,60 @@ textarea {
         position:relative;
         min-height: 100%;
         padding-bottom: 0.25em;
+        background: #fff;
+        background: linear-gradient (#fff, #DCE0E0);
+        background: -moz-linear-gradient(top,  ##fff 0%, #DCE0E0 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#DCE0E0));
+        background: -webkit-linear-gradient(top,  #fff 0%,#DCE0E0 100%);
+        background: -o-linear-gradient(top,  #fff 0%,#DCE0E0 100%);
+        background: -ms-linear-gradient(top,  #fff 0%,#DCE0E0 100%);
+        background: linear-gradient(to bottom, #fff 0%,#DCE0E0 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#DCE0E0',GradientType=0 );
+        background-attachment: fixed;
+      }
+      
+      .content {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding-left: 5em;
+        padding-right: 5em;
       }
 
       header {
          width: 100%;
-         background-color: lightgrey;
-         padding: 40px 20px 20px 20px;
+         background-color: #235769;
+         background: linear-gradient(to top right, #235769 30%, #009ABD);
+         background: -moz-linear-gradient(to top right, #235769 30%, #009ABD);
+         background: -o-linear-gradient(to top right, #235769 30%, #009ABD);
+         background: -webkit-linear-gradient(to top right, #235769 30%, #009ABD);
+         padding: 60px 20px 20px 20px;
+
        }
 
        nav {
          position: fixed;
+         z-index: 100;
          top: 0;
          width: 100%;
+         margin-left: -20px;
          text-align: center;
          font-size: 0;
-         background-color: transparent;
-       }
+         background-color: #2D3B40;
+      }
 
        nav a {
          text-decoration: none;
+         text-transform: uppercase;
          display: inline-block;
-         padding: 10px 40px 20px;
-         color: black;
-         font-size: 25px;
-         background-color: darkgrey;
+         padding: 10px 40px 10px;
+         color: #fff;
+         font-size: 20px;
+          transition: .4s background-color;
        }
 
        nav a:hover {
-        color: red;
+         background-color: #235769;
+
       }
 
       /* Slider */
@@ -205,14 +231,15 @@ textarea {
        .box1, .box2, .box3, .box4, .box5, .box6 {
          align-self: flex-start;
          border: 1px solid black;
-         background-color: lightgrey;
+         background-color: #2D3B40;
          width: 30em;
          margin: 0px 20px 30px 0px;
        }
 
        .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover {
          cursor: pointer;
-         background-color: darkgrey;
+         background-color: #235769;
+         transition: .4s background-color;
        }
 
        .box10, .box20, .box30, .box40, .box50, .box60 {
@@ -227,21 +254,29 @@ textarea {
          bottom: 0px;
          left: 0px;
          padding: 0.25em;
-         background-color: #efefef;
+         background-color: #2D3B40;
          text-align: center;
        }
 
        .footercontainer > a {
          text-decoration: none;
          display: inline-block;
-         color: darkgrey;
          font-size: 25px;
+         color: #fff;
          margin: 3px 15px;
+
        }
 
        .footercontainer > a:hover {
-         color:black;
+         color: #235769;
+        transition: .4s;
+        -webkit-transform: scale(1.4);
+       -ms-transform: scale(1.4);
+       transform: scale(1.4);
+
        }
+
+
 
 
 
