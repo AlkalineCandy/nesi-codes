@@ -55,12 +55,7 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
     vertical-align: middle;
 }
 
@@ -97,245 +92,244 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-   html {
-        height: 100vh;
-        box-sizing: border-box;
-      }
+html {
+    height: 100vh;
+    box-sizing: border-box;
+}
 
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-      }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 0.25em;
+    background: #fff;
+    background: linear-gradient (#fff, #DCE0E0);
+    background: -moz-linear-gradient(top, ##fff 0%, #DCE0E0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #DCE0E0));
+    background: -webkit-linear-gradient(top, #fff 0%, #DCE0E0 100%);
+    background: -o-linear-gradient(top, #fff 0%, #DCE0E0 100%);
+    background: -ms-linear-gradient(top, #fff 0%, #DCE0E0 100%);
+    background: linear-gradient(to bottom, #fff 0%, #DCE0E0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#DCE0E0', GradientType=0);
+    background-attachment: fixed;
+}
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+header {
+    width: 100%;
+    background-color: #235769;
+    background: linear-gradient(to top right, #235769 30%, #009ABD);
+    background: -moz-linear-gradient(to top right, #235769 30%, #009ABD);
+    background: -o-linear-gradient(to top right, #235769 30%, #009ABD);
+    background: -webkit-linear-gradient(to top right, #235769 30%, #009ABD);
+    padding: 60px 20px 20px 20px;
+}
+
+nav {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    margin-left: -20px;
+    text-align: center;
+    font-size: 0;
+    background-color: #2D3B40;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 40px 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: .4s background-color;
+}
+
+nav a:hover {
+    background-color: #235769;
+}
+
+/*Content */
+
+.sticky {
+    overflow: hidden;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 15em;
+    width: 15em;
+    padding: 1em;
+    margin-top: 30px;
+    text-align: justify;
+    -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+
+    -webkit-transform: rotate(-8deg);
+    -o-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.sticky:hover {
+    -webkit-transform: rotate(0deg) scale(1.1);
+    -o-transform: rotate(0deg) scale(1.1);
+    -moz-transform: rotate(0deg) scale(1.1);
+}
+
+.sticky > i {
+    font-size: 30px;
+    color: #2D3B40;
+    display: inline-block;
+    width: 100%;
+    margin-top: -10px;
+    text-align: center;
+    -webkit-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+}
 
 
-      body {
-        position:relative;
-        min-height: 100%;
-        padding-bottom: 0.25em;
-        background: #fff;
-        background: linear-gradient (#fff, #DCE0E0);
-        background: -moz-linear-gradient(top,  ##fff 0%, #DCE0E0 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#DCE0E0));
-        background: -webkit-linear-gradient(top,  #fff 0%,#DCE0E0 100%);
-        background: -o-linear-gradient(top,  #fff 0%,#DCE0E0 100%);
-        background: -ms-linear-gradient(top,  #fff 0%,#DCE0E0 100%);
-        background: linear-gradient(to bottom, #fff 0%,#DCE0E0 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#DCE0E0',GradientType=0 );
-        background-attachment: fixed;
-      }
 
-      .content {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding-left: 5em;
-        padding-right: 5em;
-      }
+.imgnote {
 
-      header {
-         width: 100%;
-         background-color: #235769;
-         background: linear-gradient(to top right, #235769 30%, #009ABD);
-         background: -moz-linear-gradient(to top right, #235769 30%, #009ABD);
-         background: -o-linear-gradient(to top right, #235769 30%, #009ABD);
-         background: -webkit-linear-gradient(to top right, #235769 30%, #009ABD);
-         padding: 60px 20px 20px 20px;
+  padding: 1em;
+  margin-bottom: 20px;
+  width: 40%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  left: 38vw;
+  text-align: justify;
+  background-color: #009ABD;
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+  border-radius: 20px;
+}
 
-       }
+/* Slider */
 
-       nav {
-         position: fixed;
-         z-index: 100;
-         top: 0;
-         width: 100%;
-         margin-left: -20px;
-         text-align: center;
-         font-size: 0;
-         background-color: #2D3B40;
-      }
+.responsive {
+    posititon: relative;
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 20rem;
+    border: 1px solid black;
+    padding: 10px;
+}
 
-       nav a {
-         text-decoration: none;
-         text-transform: uppercase;
-         display: inline-block;
-         padding: 10px 40px 10px;
-         color: #fff;
-         font-size: 20px;
-          transition: .4s background-color;
-       }
+.mySlides {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-       nav a:hover {
-         background-color: #235769;
+.slidebuttons {
+    position: relative;
+    top: -1.6em;
+    left: 0.1em;
+}
 
-      }
+.leftbutton {
+    opacity: 0.6;
+    cursor: pointer;
+}
 
-      /*Content */
+.rightbutton {
+    opacity: 0.6;
+    cursor: pointer;
+}
 
-      .sticky {
-        overflow: hidden;
-        color:#000;
-        background:#ffc;
-        display: block;
-        height:15em;
-        width:15em;
-        padding:1em;
-        margin-top: 30px;
-        text-align: justify;
-
-       -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
-       -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-       box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-
-       -webkit-transform: rotate(-8deg);
-       -o-transform: rotate(-8deg);
-       -moz-transform:rotate(-8deg);
-
-       -webkit-transition: all .5s ease-in-out;
-       -moz-transition: all .5s ease-in-out;
-       -o-transition: all .5s ease-in-out;
-       -ms-transition: all .5s ease-in-out;
-       transition: all .5s ease-in-out;
-    }
-
-    .sticky:hover {
-      -webkit-transform: rotate(0deg) scale(1.1);
-      -o-transform: rotate(0deg) scale(1.1);
-      -moz-transform:rotate(0deg) scale(1.1);
-
-    }
-
-     .sticky > i {
-      font-size: 25px;
-      display: inline-block;
-      width: 100%;
-            text-align: center;
-      -webkit-transform: rotate(40deg);
-      -o-transform: rotate(40deg);
-      -moz-transform:rotate(40deg);
-      }
-
-      /* Slider */
-
+@media only screen and (max-width: 700px) {
     .responsive {
-     posititon: relative;
-     display: block;
-     margin: auto;
-     width: 90%;
-     height: 20rem;
-     border: 1px solid black;
-     padding: 10px;
-   }
-
-   .mySlides {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+        width: 49.99999%;
+        margin: 6px 0;
     }
+}
 
-    .slidebuttons {
-      position: relative;
-      top: -1.6em;
-      left: 0.1em;
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
     }
+}
 
-   .leftbutton {
-     opacity: 0.6;
-     cursor:pointer;
-   }
+/* Flexbox */
 
-   .rightbutton {
-     opacity: 0.6;
-     cursor:pointer;
-   }
+.wrapper {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+    width: 90%;
+}
 
-  @media only screen and (max-width: 700px){
-       .responsive {
-           width: 49.99999%;
-           margin: 6px 0;
-       }
-   }
+.wrapper > div {
+    align-self: flex-start;
+    border: 1px solid black;
+    color: #2D3B40;
+    width: 15rem;
+    height: auto;
+    margin: 0px 20px 30px 0px;
+    text-align: center;
+}
 
-   @media only screen and (max-width: 500px){
-       .responsive {
-           width: 100%;
-       }
-   }
+.wrapper > div:hover {
+    cursor: pointer;
+    color: #235769;
+/*  transition: .4s background-color ease-in-out; */
 
-   /* Flexbox */
-
-       .wrapper {
-          border: 1px solid black;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: center;
-          margin: auto;
-          width: 90%;
-       }
-
-       .box1, .box2, .box3, .box4, .box5, .box6 {
-         align-self: flex-start;
-         border: 1px solid black;
-         background-color: #2D3B40;
-         width: 15rem;
-         margin: 0px 20px 30px 0px;
-       }
-
-       .box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover {
-         cursor: pointer;
-         background-color: #235769;
-         transition: .4s background-color;
-       }
-
-       .box10, .box20, .box30, .box40, .box50, .box60 {
-         background-color: lightblue;
-       }
-
-    /* Footer */
-
-       footer {
-         position: absolute;
-         right: 0px;
-         bottom: 0px;
-         left: 0px;
-         padding: 0.25em;
-         background-color: #2D3B40;
-         text-align: center;
-       }
-
-       .footercontainer > a {
-         text-decoration: none;
-         display: inline-block;
-         font-size: 25px;
-         color: #fff;
-         margin: 3px 15px;
-
-       }
-
-       .footercontainer > a:hover {
-         color: #235769;
-        transition: .4s;
-        -webkit-transform: scale(1.4);
-       -ms-transform: scale(1.4);
-       transform: scale(1.4);
-
-       }
+}
 
 
+.box10, .box20, .box30, .box40, .box50, .box60 {
+    background-color: lightblue;
+}
 
+/* Footer */
 
+footer {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 0.25em;
+    background-color: #2D3B40;
+    text-align: center;
+}
 
+.footercontainer > a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    margin: 3px 15px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.footercontainer > a:hover {
+    color: #235769;
+    transition: .4s;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+}
 
 /* ==========================================================================
    Helper classes
@@ -369,7 +363,8 @@ textarea {
     padding: 0;
     position: absolute;
     width: 1px;
-    white-space: nowrap; /* 1 */
+    white-space: nowrap;
+    /* 1 */
 }
 
 /*
@@ -378,8 +373,7 @@ textarea {
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     -webkit-clip-path: none;
     clip-path: none;
@@ -411,10 +405,11 @@ textarea {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -431,10 +426,7 @@ textarea {
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -445,71 +437,52 @@ textarea {
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
-
     pre {
         white-space: pre-wrap !important;
     }
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
-
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
