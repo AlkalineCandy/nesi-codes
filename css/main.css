@@ -97,6 +97,9 @@ html {
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
+    font-family: 'Gudea', sans-serif;
+
+
 }
 
 *, *:before, *:after {
@@ -144,8 +147,28 @@ header {
 header > p {
   max-width: 50%;
   padding-left: 120px;
-  padding-bottom: 80px;
+
 }
+
+
+.sm-container-header > a {
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: none;
+    font-size: 25px;
+    color: #fff;
+    margin: 3px 15px 3px 0px;
+    padding-bottom: 80px
+}
+
+.sm-container-header > a:hover {
+    color: #235769;
+    transition: .4s;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
 
 #title {
   padding-left: 120px;
@@ -188,6 +211,7 @@ nav a:hover {
     width: 15em;
     padding: 1em;
     position: absolute;
+    font-family: 'Indie Flower', cursive;
    right: 150px;
     top: 80px;
     -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
@@ -227,6 +251,7 @@ nav a:hover {
 .ackn {
   background-color: #2D3B40;
   color: #fff;
+  font-size: 15px;
   text-shadow: 1px 1px #000;
   padding: 1em 2em;
   overflow-wrap: break-word;
@@ -316,7 +341,7 @@ table {
 /* Flexbox */
 
 .wrapper {
-    border: 1px solid black;
+  
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -355,7 +380,7 @@ footer {
     text-align: center;
 }
 
-.footercontainer > a {
+.sm-container-footer > a {
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
@@ -363,7 +388,7 @@ footer {
     margin: 3px 15px;
 }
 
-.footercontainer > a:hover {
+.sm-container-footer > a:hover {
     color: #235769;
     transition: .4s;
     -webkit-transform: scale(1.4);
