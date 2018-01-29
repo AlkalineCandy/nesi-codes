@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Pixel Art Maker</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
+
 <body>
-  <div id="sidebar">
-    <h1>Pixel Art Maker</h1>
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="input_height" name="height" min="1" max="100" value="1">
-        Grid Width:
-        <input type="number" id="input_width" name="width" min="1" max="50" value="1">
-        <input id="submit_button" type="submit" onclick="false">
-    </form>
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+    <div id="sidebar">
+        <!-- Empty divs added to make the flexbox work -->
+        <h1>Pixel Art Maker</h1>
+        <h3> by <a href="https://github.com/AlkalineCandy">Nesi</a> </h3> 
+        <h2>Choose Grid Size</h2>
+        <form id="sizePicker">
+            <h3> Grid Height: </h3>
+            <div> <input type="number" id="input_height" name="height" min="1" max="100" value="1"> </div>
+            </br>
+            <h3>Grid Width:</h3>
+            <div> <input type="number" id="input_width" name="width" min="1" max="50" value="1"> </div>
+            </br>
+            <div> <input type="submit" id="submit_button" onclick="false" value="Click"> </div>
+        </form>
+        <h2>Pick A Color</h2>
+        <div> <input type="color" id="colorPicker"> </div>
+    </div>
+
+    <div id="floater"></div>
 
 
+    <main>
+        <h1>Your Canvas</h1>
+        <table id="pixel_canvas"></table>
+    </main>
 
-    <h1>Your Canvas</h1>
-    <table id="pixel_canvas"></table>
-      </div>
 
-<script src="designs.js"></script>
+    <script src="designs.js"></script>
 
 </body>
+
 </html>

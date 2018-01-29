@@ -1,19 +1,123 @@
+html {
+  box-sizing: border-box;
+}
+
 body {
-    text-align: center;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  margin: 0;
 }
 
 h1 {
-    font-family: Helvetica;
-    font-size: 50px;
-    margin: 0.2em;
+  font-size: 50px;
+  margin: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+main h1 {
+  padding-top: 0.2em;
+  padding-bottom: 0.5em;
 }
 
 h2 {
-    margin: 1em 0 0.25em;
+  margin: 0;
+  padding: 0.7em 0 1em 0;
+  font-size: 20px;
 }
 
-h2:first-of-type {
-    margin-top: 0.5em;
+h3 {
+   margin: 0;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 5em;
+}
+
+
+#sidebar {
+
+  /* Flexbox details */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+
+
+ /* Basic positioning */
+  margin-right: 70%;
+  position: absolute;
+  padding: 1.5em 2em 8em 2em;
+  z-index: 100;
+
+  /* Background spam */
+
+background: #56CCF2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+#sidebar h1:first-child {
+  padding-top: 1.5em;
+
+}
+
+#floater {
+  background: #2F80ED;
+  position: fixed;
+  width: 30%;
+  height: 100%;
+
+}
+
+#colorPicker {
+  border: 0;
+-webkit-clip-path: ellipse(35% 41% at 50% 50%);
+clip-path: ellipse(35% 41% at 50% 50%);
+
+}
+
+#submit_button {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  width: 5em;
+  height: 2.5em;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #eee;
+  color:#888;
+  text-decoration: none;
+  box-shadow: 0px -1.25em 0 #ccc inset;
+  transition:all 0.3s;
+
+}
+
+#submit_button:hover{
+  color:#30A6CC;
+  background:#ddd;
+  box-shadow:0px -0.2em 0 #96ACC0 inset;
+
+  }
+
+main {
+  margin-left: 30%;
+
+}
+
+@media (max-width: 767px) {
+    #sidebar {
+        display: none;
+    }
+
+    #floater {
+      display: none;
+    }
 }
 
 table,
