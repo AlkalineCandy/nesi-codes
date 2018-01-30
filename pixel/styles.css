@@ -70,7 +70,7 @@ background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Fir
 #floater {
   background: #2F80ED;
   position: fixed;
-  width: 30%;
+  margin-right: 30%;
   height: 100%;
 
 }
