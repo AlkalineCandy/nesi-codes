@@ -53,6 +53,7 @@ a {
   padding: 1.5em 2em 8em 2em;
   z-index: 100;
 
+
   /* Background spam */
 
 background: #56CCF2;  /* fallback for old browsers */
@@ -67,11 +68,15 @@ background: linear-gradient(to top, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Fir
 
 }
 
+
+
 #floater {
   background: #2F80ED;
   position: fixed;
-  margin-right: 30%;
   height: 100%;
+  width: 30%;
+
+
 
 }
 
