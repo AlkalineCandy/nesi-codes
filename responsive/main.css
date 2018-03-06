@@ -9,8 +9,10 @@
  */
 
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
 }
 
 /* Sections
@@ -21,7 +23,7 @@ html {
  */
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 /**
@@ -30,8 +32,8 @@ body {
  */
 
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -43,9 +45,12 @@ h1 {
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
 }
 
 /**
@@ -54,8 +59,10 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
 }
 
 /* Text-level semantics
@@ -66,7 +73,7 @@ pre {
  */
 
 a {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 /**
@@ -75,18 +82,20 @@ a {
  */
 
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
 }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
-b,
-strong {
-  font-weight: bolder;
+b, strong {
+    font-weight: bolder;
 }
 
 /**
@@ -94,11 +103,11 @@ strong {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+code, kbd, samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
 }
 
 /**
@@ -106,7 +115,7 @@ samp {
  */
 
 small {
-  font-size: 80%;
+    font-size: 80%;
 }
 
 /**
@@ -114,20 +123,19 @@ small {
  * all browsers.
  */
 
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+    top: -0.5em;
 }
 
 /* Embedded content
@@ -138,7 +146,7 @@ sup {
  */
 
 img {
-  border-style: none;
+    border-style: none;
 }
 
 /* Forms
@@ -149,15 +157,15 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
 }
 
 /**
@@ -165,9 +173,9 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 
-button,
-input { /* 1 */
-  overflow: visible;
+button, input {
+    /* 1 */
+    overflow: visible;
 }
 
 /**
@@ -175,43 +183,34 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 
-button,
-select { /* 1 */
-  text-transform: none;
+button, select {
+    /* 1 */
+    text-transform: none;
 }
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
 }
 
 /**
  * Remove the inner border and padding in Firefox.
  */
 
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
 }
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
 }
 
 /**
@@ -219,7 +218,7 @@ button:-moz-focusring,
  */
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+    padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -230,12 +229,18 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
 }
 
 /**
@@ -243,7 +248,7 @@ legend {
  */
 
 progress {
-  vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 /**
@@ -251,7 +256,7 @@ progress {
  */
 
 textarea {
-  overflow: auto;
+    overflow: auto;
 }
 
 /**
@@ -259,19 +264,19 @@ textarea {
  * 2. Remove the padding in IE 10.
  */
 
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+[type="checkbox"], [type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
 }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+    height: auto;
 }
 
 /**
@@ -280,8 +285,10 @@ textarea {
  */
 
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
 }
 
 /**
@@ -289,7 +296,7 @@ textarea {
  */
 
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
 
 /**
@@ -298,8 +305,10 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
 }
 
 /* Interactive
@@ -310,7 +319,7 @@ textarea {
  */
 
 details {
-  display: block;
+    display: block;
 }
 
 /*
@@ -318,7 +327,7 @@ details {
  */
 
 summary {
-  display: list-item;
+    display: list-item;
 }
 
 /* Misc
@@ -329,7 +338,7 @@ summary {
  */
 
 template {
-  display: none;
+    display: none;
 }
 
 /**
@@ -337,229 +346,200 @@ template {
  */
 
 [hidden] {
-  display: none;
+    display: none;
 }
-
 
 /* Nesi's code starts here */
 
-
 html {
-  box-sizing: border-box;
-  background-color: whitesmoke;
-  font-family: 'Raleway', sans-serif;
-
-
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 
-
 header {
-
-  background: #56CCF2;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(40deg, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(40deg, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #235769;
+    color: whitesmoke;
+    text-shadow: 1px 1px #000;
+    background: linear-gradient(to top right, #235769 30%, #009ABD);
+    background: -moz-linear-gradient(to top right, #235769 30%, #009ABD);
+    background: -o-linear-gradient(to top right, #235769 30%, #009ABD);
+    background: -webkit-linear-gradient(to top right, #235769 30%, #009ABD);
 }
 
 h1, h2 {
-  text-align: right;
-  padding-right: 20px;
+    text-align: right;
+    padding-right: 20px;
 }
 
 h1 {
-  margin: 0;
-  font-size: 30px;
-  font-size: 10vw;
+    margin: 0;
+    font-size: 30px;
+    font-size: 10vw;
 }
 
 h2 {
-  padding-bottom: 10px;
-  padding-left: 5px;
-  font-size: 6vw;
-
+    padding-bottom: 10px;
+    padding-left: 5px;
+    font-size: 6vw;
 }
 
+.logo {
+    width: 100px;
+    float: left;
+    margin: 20px;
+}
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .imgbox {
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 
-
 .imgbox:hover {
-  border-radius:10%;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-
+    border-radius: 10%;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 
 p {
-  font-size: 18px;
-  color: black;
-  text-align: center;
-
+    font-size: 18px;
+    text-align: center;
+    color: #2D3B40;
 }
 
 main {
-  margin-bottom: 20%;
-
+    margin-bottom: 20%;
 }
 
 .container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .workbox {
-margin: 1em;
-width: 25%;
-min-width: 150px;
+    margin: 1em;
+    width: 25%;
+    min-width: 150px;
 }
 
+.cover {
+    max-width: 100%;
+    object-fit: contain;
+}
 
-
-
-
-
-    /* Responsive queries */
+/* Responsive queries */
 
 @media screen and (min-width: 440px) {
-
     h1 {
-      font-size: 44px;
+        font-size: 44px;
     }
-
     h2 {
-      font-size: 26.5px;
-
-  }
-
+        font-size: 26.5px;
+    }
 }
 
 @media screen and (min-width: 600px) {
-
-.cover {
-  width: 60%;
-}
-
-
-#container2 {
-  width: 35%;
-  order: -1;
-}
-
-header {
-  margin-top: 10px;
-}
-
-h1 {
-  font-size: 34px;
-  font-size: 7vw;
-  padding-top: 10px;
-}
-
-h2 {
-  font-size: 24px;
-  font-size: 4vw;
-  padding-bottom: 15px;
-}
-
+    .cover {
+        width: 60%;
+    }
+    #container2 {
+        width: 35%;
+        order: -1;
+    }
+    header {
+        margin-top: 10px;
+    }
+    h1 {
+        font-size: 34px;
+        font-size: 7vw;
+        padding-top: 10px;
+    }
+    h2 {
+        font-size: 24px;
+        font-size: 4vw;
+        padding-bottom: 15px;
+    }
 }
 
 @media screen and (min-width: 800px) {
-
-  h1 {
-    font-size: 56px;
-  }
-
-  h2 {
-    font-size: 32px;
-
-}
+    h1 {
+        font-size: 56px;
+    }
+    h2 {
+        font-size: 32px;
+    }
 }
 
 @media screen and (min-width: 1030px) {
-
-.cover {
-  width: 700px;
-
+    .cover {
+        width: 700px;
+    }
+    #container2 {
+        width: 250px;
+    }
 }
-
-#container2 {
-  width: 250px;
-
-}
-}
-
 
 @media screen and (min-width: 1100px) {
-
-  header, hr {
-    margin-left: 10%;
-    margin-right: 10%;
+    header, hr {
+        margin-left: 10%;
+        margin-right: 10%;
     }
-
     h1 {
-      font-size: 34px;
-      font-size: 5vw;
+        font-size: 34px;
+        font-size: 5vw;
     }
-
     h2 {
-      font-size: 24px;
-      font-size: 2.3vw;
-
+        font-size: 24px;
+        font-size: 2.3vw;
     }
 }
 
+/* Footer starts here */
 
+footer {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 0.25em;
+    background-color: #2D3B40;
+    text-align: center;
+}
 
+.sm-container-footer>a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    margin: 3px 15px;
+}
 
-    /* Footer starts here */
+.sm-container-footer>a:hover {
+    color: #235769;
+    transition: .4s;
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+}
 
-    footer {
-        position: fixed;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        padding: 0.25em;
-        background-color: #2D3B40;
-        text-align: center;
-    }
-
-    .sm-container-footer > a {
-        display: inline-block;
-        font-size: 25px;
-        color: #fff;
-        margin: 3px 15px;
-    }
-
-    .sm-container-footer > a:hover {
-        color: #235769;
-        transition: .4s;
-        -webkit-transform: scale(1.4);
-        -ms-transform: scale(1.4);
-        transform: scale(1.4);
-    }
-
-
-    .sr-only {
-        position: absolute;
-        margin: -1px 0 0 -1px;
-        padding: 0;
-        display: block;
-        width: 1px;
-        height: 1px;
-        font-size: 1px;
-        line-height: 1px;
-        overflow: hidden;
-        clip: rect(0,0,0,0);
-        border: 0;
-        outline: 0;
-        }
+.sr-only {
+    position: absolute;
+    margin: -1px 0 0 -1px;
+    padding: 0;
+    display: block;
+    width: 1px;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    outline: 0;
+}
