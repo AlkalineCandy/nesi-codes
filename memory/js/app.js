@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     function playFunc(event) {
 
+        counterFunc(event);
+
         if (openCards.length < 2) {
             showCard(event);
             addToOpenCards(event);
@@ -73,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         if (openCards.length === 2) {
             // if a card is clicked twice, this flips it back without timed delay
             if (openCards[0].isSameNode(openCards[1])) {
-                openCards[0].classList.remove('open', 'show');
+                openCards[0].classList.remove('open');
                 removeFromArray(openCards, 2);
 
                 // compares cards to see if they match 
@@ -81,9 +83,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 lockMatch();
                 removeFromArray(openCards, 2);
             } else {
+                openCards[0].classList.add("no-match");
+                openCards[1].classList.add("no-match");
                 flipBack(event);
                 removeFromArray(openCards, 2);
             }
+        }
+
+        if (matchedCards.length === 16) {
+            winScenario();
         }
     }
 
@@ -91,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
     function showCard(event) {
-        return event.target.classList.add('open', 'show');
+        return event.target.classList.add('open');
     };
 
 
@@ -102,10 +110,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     function lockMatch(event) {
         for (openCard of openCards) {
-            debugger
             openCard.classList.add('match');
             openCard.removeEventListener('click', playFunc);
-            matchedCards.push(openCard); 
+            matchedCards.push(openCard);
         }
     };
 
@@ -118,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         window.setTimeout(function () {
 
             cards.forEach(card => {
-                card.classList.remove('open', 'show');
+                card.classList.remove('open', 'no-match');
                 document.body.classList.remove('no-click');
             })
         }, 1000);
@@ -148,32 +155,48 @@ document.addEventListener('DOMContentLoaded', function (event) {
     clickEvent();
 
     // 4.) WIN SCENARIO 
+    // Source of the (now altered) code: https://www.w3schools.com/howto/howto_css_modals.asp 
 
-   // 4.a.) Popup variables 
+    let popup = document.querySelector('.popupwrap');
+    let closebtn = document.querySelector('.popupclose');
+    let finalScore = document.querySelector('.score');
+    let eval = document.querySelector('.evaluation');
 
-let popup = document.querySelector('.popupwrap');
-let btn = document.getElementById('myBtn'); //delete
-let close = document.querySelector('.popupclose');
-let finalScore = document.querySelector('.score'); 
-let eval = document.querySelector('.evaluation'); 
+    function winScenario() {
+        popup.style.display = "block";
+        finalScore.innerHTML = `Your final score is ${counter}. 
+        <br> Time spent playing: ${min.innerHTML} minutes, ${sec.innerHTML} seconds.`;
 
-btn.onclick = function() {
-    popup.style.display = "block";
-  finalScore.innerHTML = 'Your final score is counter.';
-  
-}
-
-
-
-// Close window by cicking on x
-close.addEventListener('click,', function(event) {
-    popup.style.display = "none";
-}); 
-
-
-// Close window by clicking outside of it 
+        if (counter >= 18) {
+            eval.innerHTML = "That's neat! Wanna try again?";
+        } else if (counter < 18 && counter >= 10) {
+            eval.innerHTML = "Good job! Wanna improve your score?";
+        } else if (counter < 10) {
+            eval.innerHTML = "Excellent work!";
+        } else {
+            eval.innerHTML = "Thanks for playing!";
+        }
+    }
 
 
+    // Close window by cicking on x
+    closebtn.addEventListener("click", function (event) {
+        popup.style.display = "none";
+    });
+
+    // Close window by clicking outside of it 
+    window.addEventListener("click", function (event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    });
+
+    // Close window by pressing Esc 
+    window.addEventListener("keyup", function (event) {
+        if (event.key === "Escape") {
+            popup.style.display = "none";
+        }
+    });
 
 
 

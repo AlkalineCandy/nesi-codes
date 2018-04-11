@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Matching Game</title>
@@ -8,6 +9,7 @@
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
 
     <div class="container">
@@ -16,20 +18,17 @@
         </header>
 
         <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        	</ul>
+            <div>
+                <span class="moves">0</span> Moves </div>
 
-            <div><span class="moves">0</span> Moves </div>
-        
-            <div><span id="min">00</span>:<span id="sec">00</span></div>
-          
+            <div>
+                <span id="min">00</span>:<span id="sec">00</span>
+            </div>
+
 
             <div class="restart" input type='button' onclick='location.reload();' value='Refresh Page'>
-        		<i class="fa fa-repeat"></i>
-        	</div>
+                <i class="fa fa-repeat"></i>
+            </div>
         </section>
 
         <ul class="deck">
@@ -83,27 +82,24 @@
             </li>
         </ul>
 
-        <button id="myBtn">Open Modal</button>
+        <div class="popupwrap">
+            <div class="popup">
+                <button class="popupclose" aria-label="Close Win Message">&times;</button>
+                <div class="popupflex">
+                    <h1 class="winmessage">Congratulations!</h1>
+                    <div class="winicon">
+                        <i class="fa fa-trophy"></i>
+                    </div>
+                    <p class="score"></p>
+                    <p class="evaluation"></p>
+                </div>
 
+            </div>
 
-<!-- The Modal -->
-<div class="popupwrap">
-
-  <!-- Modal content -->
-  <div class="popup">
-    <span class="popupclose">&times;</span>
-    <div class="popupflex">
-      <h1 class="winmessage">Congratulations!</h1>
-      <div class="winicon"><i class="fa fa-trophy"></i></div>
-<p class="score"></p> 
-      <p class="evaluation"></p>
-    </div>
-    
-  </div>
-
-</div>
+        </div>
     </div>
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
