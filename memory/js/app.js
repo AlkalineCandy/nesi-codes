@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
         }
 
-        if (matchedCards.length === 2) {
+        if (matchedCards.length === 16) {
             winScenario();
         }
     }
