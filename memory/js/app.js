@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
 
         return array;
-    };
+    }
 
 
     function setCards() {
@@ -57,9 +57,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             deck.appendChild(shuffledCards[i]);
         }
 
-    };
-
-
+    }
 
     // 3.) LET'S PLAY: this goes down upon clicking a card
 
@@ -90,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
         }
 
-        if (matchedCards.length === 16) {
+        if (matchedCards.length === 2) {
             winScenario();
         }
     }
@@ -100,21 +98,21 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     function showCard(event) {
         return event.target.classList.add('open');
-    };
+    }
 
 
     function addToOpenCards(event) {
         return openCards.push(event.target);
-    };
+    }
 
 
     function lockMatch(event) {
-        for (openCard of openCards) {
+        for (let openCard of openCards) {
             openCard.classList.add('match');
             openCard.removeEventListener('click', playFunc);
             matchedCards.push(openCard);
         }
-    };
+    }
 
     function flipBack(event) {
 
@@ -127,40 +125,74 @@ document.addEventListener('DOMContentLoaded', function (event) {
             cards.forEach(card => {
                 card.classList.remove('open', 'no-match');
                 document.body.classList.remove('no-click');
-            })
+            });
         }, 1000);
-    };
+    }
 
     // removes given amount of items from an array
     function removeFromArray(arr, item) {
         for (let i = 0; i < item; i++) {
             arr.pop();
         }
-    };
+    }
 
     function counterFunc(event) {
         counter += 1;
-        return document.querySelector('.moves').innerHTML = counter;
-
-    };
+        document.querySelector('.moves').innerHTML = counter;
+    }
 
     // 3.b.) CLICK HANDLER: event listener that makes cards clickable 
 
     function clickEvent() {
         cards.forEach(card => {
             card.addEventListener('click', playFunc);
-        })
-    };
+        });
+    }
 
     clickEvent();
 
-    // 4.) WIN SCENARIO 
+    // 4.) TIMER 
+
+    // adds zeroes to time display
+    function addZero(num) {
+        if (num < 10) {
+            return "0" + num;
+        } else {
+            return num;
+        }
+    }
+
+
+    function timer() {
+        let intervalID = window.setInterval(function () {
+            secCount += 1;
+            sec.innerHTML = addZero(secCount);
+            if (secCount === 10) {
+                minCount += 1;
+                min.innerHTML = addZero(minCount);
+                secCount = 0;
+                sec.innerHTML = addZero(secCount);
+            }
+
+            if (matchedCards.length === 2) {
+                window.clearInterval(intervalID);
+            }
+
+        }, 1000);
+        window.removeEventListener('click', timer);
+
+
+    }
+
+    window.addEventListener('click', timer);
+
+    // 5.) WIN SCENARIO 
     // Source of the (now altered) code: https://www.w3schools.com/howto/howto_css_modals.asp 
 
     let popup = document.querySelector('.popupwrap');
     let closebtn = document.querySelector('.popupclose');
     let finalScore = document.querySelector('.score');
-    let eval = document.querySelector('.evaluation');
+    let evaluation = document.querySelector('.evaluation');
 
     function winScenario() {
         popup.style.display = "block";
@@ -168,16 +200,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
         <br> Time spent playing: ${min.innerHTML} minutes, ${sec.innerHTML} seconds.`;
 
         if (counter >= 18) {
-            eval.innerHTML = "That's neat! Wanna try again?";
+            evaluation.innerHTML = "That's neat! Wanna try again?";
         } else if (counter < 18 && counter >= 10) {
-            eval.innerHTML = "Good job! Wanna improve your score?";
+            evaluation.innerHTML = "Good job! Wanna improve your score?";
         } else if (counter < 10) {
-            eval.innerHTML = "Excellent work!";
+            evaluation.innerHTML = "Excellent work!";
         } else {
-            eval.innerHTML = "Thanks for playing!";
+            evaluation.innerHTML = "Thanks for playing!";
         }
     }
-
 
     // Close window by cicking on x
     closebtn.addEventListener("click", function (event) {
@@ -197,38 +228,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
             popup.style.display = "none";
         }
     });
-
-
-
-    // 5.) TIMER 
-
-    // adds zeroes to time display
-    function addZero(num) {
-        if (num < 10) {
-            return "0" + num;
-        } else {
-            return num;
-        }
-    };
-
-
-    function timer() {
-        window.setInterval(function () {
-            secCount += 1;
-            sec.innerHTML = addZero(secCount);
-            if (secCount === 10) {
-                minCount += 1;
-                min.innerHTML = addZero(minCount);
-                secCount = 0;
-                sec.innerHTML = addZero(secCount);
-            }
-
-        }, 1000)
-        window.removeEventListener('click', timer);
-    };
-
-    window.addEventListener('click', timer);
-
 
 }); // closes the DOMContentLoaded event listener 
 
