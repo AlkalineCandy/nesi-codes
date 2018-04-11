@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 sec.innerHTML = addZero(secCount);
             }
 
-            if (matchedCards.length === 2) {
+            if (matchedCards.length === 16) {
                 window.clearInterval(intervalID);
             }
 
