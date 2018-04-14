@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let openCards = [];
     let matchedCards = [];
     let counter = 0;
+    let scoreStars = document.querySelector(".stars");
 
     let min = document.getElementById('min');
     let sec = document.getElementById('sec');
@@ -52,18 +53,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
 
     function setCards() {
-
         for (let i = 0; i < shuffledCards.length; i++) {
             deck.appendChild(shuffledCards[i]);
         }
-
     }
 
     // 3.) LET'S PLAY: this goes down upon clicking a card
 
     function playFunc(event) {
-
-        counterFunc(event);
 
         if (openCards.length < 2) {
             showCard(event);
@@ -71,15 +68,19 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
 
         if (openCards.length === 2) {
+
             // if a card is clicked twice, this flips it back without timed delay
-            if (openCards[0].isSameNode(openCards[1])) {
+            if (event.currentTarget.isSameNode(openCards[0])) {
                 openCards[0].classList.remove('open');
                 removeFromArray(openCards, 2);
+                counter -= 2;
 
                 // compares cards to see if they match 
             } else if (openCards[0].firstElementChild.isEqualNode(openCards[1].firstElementChild)) {
                 lockMatch();
                 removeFromArray(openCards, 2);
+
+                // non-matching cards
             } else {
                 openCards[0].classList.add("no-match");
                 openCards[1].classList.add("no-match");
@@ -88,23 +89,19 @@ document.addEventListener('DOMContentLoaded', function (event) {
             }
         }
 
-        if (matchedCards.length === 16) {
-            winScenario();
-        }
+        moveCounter(event);
+        starCounter();
     }
 
     // 3.a.) playFunc FUNCTIONS (invoked upon clicking a card)
-
 
     function showCard(event) {
         return event.target.classList.add('open');
     }
 
-
     function addToOpenCards(event) {
         return openCards.push(event.target);
     }
-
 
     function lockMatch(event) {
         for (let openCard of openCards) {
@@ -115,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
 
     function flipBack(event) {
-
         // adds an invisible layer so that no further cards can be clicked while the timeout goes down
         document.body.classList.add('no-click');
 
@@ -136,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
     }
 
-    function counterFunc(event) {
+    function moveCounter(event) {
         counter += 1;
         document.querySelector('.moves').innerHTML = counter;
     }
@@ -151,7 +147,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     clickEvent();
 
-    // 4.) TIMER 
+    // 3.c.) SCORE PANEL STARS behavior
+
+    function starCounter() {
+        if (counter % 5 === 0) {
+            scoreStars.firstElementChild.remove();
+        } else {
+            return false;
+        }
+    }
+
+    // 4.) TIMER + invoking winScenario() 
 
     // adds zeroes to time display
     function addZero(num) {
@@ -162,9 +168,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
     }
 
-
     function timer() {
         let intervalID = window.setInterval(function () {
+
+            if (matchedCards.length === 16) {
+                winScenario(); // game ends here 
+                window.clearInterval(intervalID);
+                return event.stopPropagation();
+            }
+
             secCount += 1;
             sec.innerHTML = addZero(secCount);
             if (secCount === 10) {
@@ -173,20 +185,14 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 secCount = 0;
                 sec.innerHTML = addZero(secCount);
             }
-
-            if (matchedCards.length === 16) {
-                window.clearInterval(intervalID);
-            }
-
         }, 1000);
         window.removeEventListener('click', timer);
-
-
     }
 
     window.addEventListener('click', timer);
 
-    // 5.) WIN SCENARIO 
+    // 5.) WIN SCENARIO - invoked in the timer()! 
+
     // Source of the (now altered) code: https://www.w3schools.com/howto/howto_css_modals.asp 
 
     let popup = document.querySelector('.popupwrap');
@@ -197,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     function winScenario() {
         popup.style.display = "block";
         finalScore.innerHTML = `Your final score is ${counter}. 
-        <br> Time spent playing: ${min.innerHTML} minutes, ${sec.innerHTML} seconds.`;
+        <br> Time spent playing: ${minCount} minutes, ${secCount} seconds.`;
 
         if (counter >= 18) {
             evaluation.innerHTML = "That's neat! Wanna try again?";
