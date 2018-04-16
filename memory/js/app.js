@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let matchedCards = [];
     let counter = 0;
     let scoreStars = document.querySelector(".stars");
+    let scorePanel = document.querySelector(".score-panel");
 
     let min = document.getElementById('min');
     let sec = document.getElementById('sec');
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // 3.) LET'S PLAY: this goes down upon clicking a card
 
     function playFunc(event) {
+
 
         if (openCards.length < 2) {
             showCard(event);
@@ -150,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     // 3.c.) SCORE PANEL STARS behavior
 
     function starCounter() {
-        if (counter % 5 === 0) {
+        if (counter % 10 === 0 && counter >= 10) {
             scoreStars.firstElementChild.remove();
         } else {
             return false;
@@ -199,17 +201,27 @@ document.addEventListener('DOMContentLoaded', function (event) {
     let closebtn = document.querySelector('.popupclose');
     let finalScore = document.querySelector('.score');
     let evaluation = document.querySelector('.evaluation');
+    let displayStars = document.querySelector(".display-stars");
+
 
     function winScenario() {
         popup.style.display = "block";
-        finalScore.innerHTML = `Your final score is ${counter}. 
+
+        finalScore.innerHTML = `Your final move count is ${counter}.    
         <br> Time spent playing: ${minCount} minutes, ${secCount} seconds.`;
 
-        if (counter >= 18) {
+        let starsArray = Array.from(document.getElementsByClassName("fa fa-star"));
+        for (x = 0; x < starsArray.length; x++) {
+            displayStars.appendChild(starsArray[x]);
+        }
+
+
+        if (counter >= 30) {
             evaluation.innerHTML = "That's neat! Wanna try again?";
-        } else if (counter < 18 && counter >= 10) {
+
+        } else if (counter < 30 && counter >= 15) {
             evaluation.innerHTML = "Good job! Wanna improve your score?";
-        } else if (counter < 10) {
+        } else if (counter < 15) {
             evaluation.innerHTML = "Excellent work!";
         } else {
             evaluation.innerHTML = "Thanks for playing!";

@@ -1,23 +1,8 @@
 # Memory Game Project
 
-## Table of Contents
+## Context
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
-
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+This game is a Udacity learning project. The starter code can be found in the repo from which this one was forked. 
 
 ## Description
 
@@ -27,7 +12,7 @@ Your **moves** are counted and the **time** spent on the game is measured. You c
 
 When you win, a **popup window** will inform you of your scores. You can choose to close this window and take a screenshot of your results. ;) 
 
-The **star rating** goes down by _each 5 moves_ you've "used up". 
+The **star rating** goes down by _each 10 moves_ you've "used up". 
 
 ## External sources
 
