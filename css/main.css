@@ -55,7 +55,12 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio, canvas, iframe, img, svg, video {
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
     vertical-align: middle;
 }
 
@@ -89,7 +94,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Nesi's custom styles
    ========================================================================== */
 
 html {
@@ -98,11 +103,11 @@ html {
     overflow-y: scroll;
     overflow-x: hidden;
     font-family: 'Gudea', sans-serif;
-
-
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -127,7 +132,6 @@ body {
     margin: 0 auto 100px auto;
     padding-left: 5em;
     padding-right: 5em;
-
 }
 
 header {
@@ -144,14 +148,12 @@ header {
     margin-bottom: 50px;
 }
 
-header > p {
-  max-width: 50%;
-  padding-left: 120px;
-
+header>p {
+    max-width: 50%;
+    padding-left: 120px;
 }
 
-
-.sm-container-header > a {
+.sm-container-header>a {
     text-decoration: none;
     display: inline-block;
     text-shadow: none;
@@ -161,7 +163,7 @@ header > p {
     padding-bottom: 80px
 }
 
-.sm-container-header > a:hover {
+.sm-container-header>a:hover {
     color: #235769;
     transition: .4s;
     -webkit-transform: scale(1.4);
@@ -169,9 +171,8 @@ header > p {
     transform: scale(1.4);
 }
 
-
 #title {
-  padding-left: 120px;
+    padding-left: 120px;
 }
 
 nav {
@@ -212,12 +213,12 @@ nav a:hover {
     padding: 1em;
     position: absolute;
     font-family: 'Indie Flower', cursive;
-   right: 150px;
+    right: 150px;
     top: 80px;
     -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
     -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
     box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
-
+    transform: rotate(8deg);
     -webkit-transform: rotate(8deg);
     -o-transform: rotate(8deg);
     -moz-transform: rotate(8deg);
@@ -229,12 +230,13 @@ nav a:hover {
 }
 
 .sticky:hover {
+    transform: rotate(0deg) scale(1.1);
     -webkit-transform: rotate(0deg) scale(1.1);
     -o-transform: rotate(0deg) scale(1.1);
     -moz-transform: rotate(0deg) scale(1.1);
 }
 
-.sticky > i {
+.sticky>i {
     font-size: 30px;
     color: #2D3B40;
     text-shadow: 2px 2px #e6e6e6;
@@ -242,53 +244,53 @@ nav a:hover {
     width: 100%;
     margin-top: -10px;
     text-align: center;
+    transform: rotate(40deg);
     -webkit-transform: rotate(40deg);
     -o-transform: rotate(40deg);
     -moz-transform: rotate(40deg);
 }
 
-
 .ackn {
-  background-color: #2D3B40;
-  color: #fff;
-  font-size: 15px;
-  text-shadow: 1px 1px #000;
-  padding: 1em 2em;
-  overflow-wrap: break-word;
-  -webkit-box-shadow: inset 0px 0px 12px 3px rgba(0,0,0,0.75);
--moz-box-shadow: inset 0px 0px 12px 3px rgba(0,0,0,0.75);
-box-shadow: inset 0px 0px 12px 3px rgba(0,0,0,0.75);
-border-radius: 20px 20px 20px 20px;
--moz-border-radius: 20px 20px 20px 20px;
--webkit-border-radius: 20px 20px 20px 20px;
-
+    background-color: #2D3B40;
+    color: #fff;
+    font-size: 15px;
+    text-shadow: 1px 1px #000;
+    padding: 1em 2em;
+    overflow-wrap: break-word;
+    -webkit-box-shadow: inset 0px 0px 12px 3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 12px 3px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 12px 3px rgba(0, 0, 0, 0.75);
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
 }
 
 table {
-  width: 100%;
-  margin: auto;
-  margin-bottom: 40px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 40px;
 }
 
 .font {
-  font-family: "Consolas", "Courier New", monospace;
+    font-family: "Consolas", "Courier New", monospace;
 }
+
 .td_name {
     font: bold 26px "Consolas", "Courier New", monospace;
     text-align: center;
     padding: 1em;
 }
+
 .td_content {
     padding: 1em;
     border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     -webkit-border-radius: 20px 20px 20px 20px;
-      transition: .2s background-color;
+    transition: .2s background-color;
 }
 
 .td_content:hover {
-  background-color: #bfefff;
-
+    background-color: #bfefff;
 }
 
 /* Slider */
@@ -341,7 +343,6 @@ table {
 /* Flexbox */
 
 .wrapper {
-  
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -350,7 +351,7 @@ table {
     width: 90%;
 }
 
-.wrapper > div {
+.wrapper>div {
     align-self: flex-start;
     border: 1px solid black;
     color: #2D3B40;
@@ -360,13 +361,11 @@ table {
     text-align: center;
 }
 
-.wrapper > div:hover {
+.wrapper>div:hover {
     cursor: pointer;
     color: #235769;
-/*  transition: .4s background-color ease-in-out; */
-
+    /*  transition: .4s background-color ease-in-out; */
 }
-
 
 /* Footer */
 
@@ -380,7 +379,7 @@ footer {
     text-align: center;
 }
 
-.sm-container-footer > a {
+.sm-container-footer>a {
     text-decoration: none;
     display: inline-block;
     font-size: 25px;
@@ -388,7 +387,7 @@ footer {
     margin: 3px 15px;
 }
 
-.sm-container-footer > a:hover {
+.sm-container-footer>a:hover {
     color: #235769;
     transition: .4s;
     -webkit-transform: scale(1.4);
@@ -438,7 +437,8 @@ footer {
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
     clip: auto;
     -webkit-clip-path: none;
     clip-path: none;
@@ -470,7 +470,8 @@ footer {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
     content: " ";
     /* 1 */
     display: table;
@@ -491,7 +492,10 @@ footer {
     /* Style adjustments for viewports that meet the condition */
 }
 
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -502,7 +506,9 @@ footer {
    ========================================================================== */
 
 @media print {
-    *, *:before, *:after {
+    *,
+    *:before,
+    *:after {
         background: transparent !important;
         color: #000 !important;
         /* Black prints faster:
@@ -510,7 +516,8 @@ footer {
         box-shadow: none !important;
         text-shadow: none !important;
     }
-    a, a:visited {
+    a,
+    a:visited {
         text-decoration: underline;
     }
     a[href]:after {
@@ -523,13 +530,15 @@ footer {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-    a[href^="#"]:after, a[href^="javascript:"]:after {
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
         content: "";
     }
     pre {
         white-space: pre-wrap !important;
     }
-    pre, blockquote {
+    pre,
+    blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
@@ -540,14 +549,18 @@ footer {
     thead {
         display: table-header-group;
     }
-    tr, img {
+    tr,
+    img {
         page-break-inside: avoid;
     }
-    p, h2, h3 {
+    p,
+    h2,
+    h3 {
         orphans: 3;
         widows: 3;
     }
-    h2, h3 {
+    h2,
+    h3 {
         page-break-after: avoid;
     }
 }
